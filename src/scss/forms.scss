@@ -1,0 +1,58 @@
+.form-wrapper {
+    background: #fafafa;
+    /* Image Card */
+
+
+    padding: 38px 73px 50px 68px;
+    max-width: 580px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.07);
+    border-radius: 10px 0px 10px 10px;
+}
+.form {
+
+    display: flex;
+    flex-direction: column;
+
+    &__text {
+        font-size: 14px;
+        line-height: 140%;
+        margin-bottom: 18px;
+        color: rgba(63, 65, 66, 0.4);
+    }
+    &__button {
+        margin-top: 40px;
+        display: inline-block;
+     
+        padding: 8px 13px;
+        width: 100%;
+        height: 38px;
+
+        /* Accent */
+        font-weight: 500;
+        font-size: 16px;
+        color: #fff;
+        @include flex-center;
+        background: #a6775b;
+        border-radius: 5px;
+    }
+    label {
+        span {
+            font-size: 14px;
+            color: #1d1d1d;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+        input {
+            padding: 17px 21px 17px 15px;
+            display: inline-block;
+
+            width: 100%;
+            height: 38px;
+            font-size: 14px;
+
+            color: #a0a0a0;
+            border: 2px solid #e8e8e8;
+            box-sizing: border-box;
+        }
+    }
+}
