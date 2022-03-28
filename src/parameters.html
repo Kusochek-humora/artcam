@@ -295,7 +295,7 @@
 
                 </div>
                 <div class="parameters__right">
-                    <button type="button" class="parameters__right-button">Скачать G-код</button>
+                    <a type="button" class="parameters__right-button" href="#popup">Скачать G-код</a>
 
                     <div class="parameters__right-image">
                         <img src="images/facade-image.jpg" alt="">
@@ -312,8 +312,199 @@
         </section>
 
     </main>
+
     <!--#include virtual="/templates/_footer.html" -->
 
+    <div class=" door mfp-hide  wrapper__popup mpf-wrapper" id="popup">
+        <button class="mfp-close close">
+            <img clas="close" src="images/close.svg" alt="image the close">
+        </button>
+        <div class="door-top">
+            <div class="door__left">
+
+                <img class="door__img" src="images/door.jpg" alt="image the door">
+
+                <h4 class="door__title">
+                    Квадро фасад
+                </h4>
+
+                <ol class="door__list">
+
+                    <li class="door__list-item">
+                        <!-- <a class="door__link" href="#">Фреза 12</a> ВОЗМОЖНО ЭТО ССЫЛКИ??!! -->
+                        Фреза 12
+                    </li>
+
+                    <li class="door__list-item">
+                        <!-- <a class="door__link" href="#">Фреза 34Фреза 12</a> -->
+                        Фреза 34Фреза 12
+                    </li>
+
+                    <li class="door__list-item">
+                        <!-- <a class="door__link" href="#">Фреза 34Фреза 12</a> -->
+                        Фреза 34Фреза 12
+                    </li>
+
+                    <li class="door__list-item">
+                        <!-- <a class="door__link" href="#">Фреза 34Фреза 12</a> -->
+                        Фреза 34Фреза 12
+                    </li>
+
+                    <li class="door__list-item">
+                        <!-- <a class="door__link" href="#">Фреза 34Фреза 12</a> -->
+                        Фреза 34Фреза 12
+                    </li>
+
+                    <li class="door__list-item">
+                        <!-- <a class="door__link" href="#">Фреза 34Фреза 12</a> -->
+                        Фреза 34Фреза 12
+                    </li>
+
+                    <li class="door__list-item">
+                        <!-- <a class="door__link" href="#">Фреза 34Фреза 12</a> -->
+                        Фреза 34Фреза 12
+                    </li>
+
+                    <li class="door__list-item">
+                        <!-- <a class="door__link" href="#">Фреза 34Фреза 12</a> -->
+                        Фреза 34Фреза 12
+                    </li>
+
+                    <li class="door__list-item">
+                        <!-- <a class="door__link" href="#">Фреза 34Фреза 12</a> -->
+                        Фреза 34Фреза 12
+                    </li>
+
+                    <li class="door__list-item">
+                        <!-- <a class="door__link" href="#">Фреза 34Фреза 12</a> -->
+                        Фреза 34
+                    </li>
+
+                </ol>
+
+            </div>
+
+            <div class="door__right">
+
+                <div class="door__items">
+
+                    <div class="door__item">
+
+                        <h4 class="door__title">
+                            Деталь
+                        </h4>
+
+                        <div class="door__info">
+                            Деталь 1
+                        </div>
+
+                        <div class="door__info">
+                            Деталь 2
+                        </div>
+
+                    </div>
+
+                    <div class="door__item">
+
+                        <h4 class="door__title">
+                            Ширина
+                        </h4>
+
+                        <div class="door__info">
+                            100
+                        </div>
+
+                        <div class="door__info">
+                            300
+                        </div>
+
+                    </div>
+
+
+                    <div class="door__item">
+
+                        <h4 class="door__title">
+                            Высота
+                        </h4>
+
+                        <div class="door__info">
+                            100
+                        </div>
+
+                        <div class="door__info">
+                            50
+                        </div>
+
+                    </div>
+
+
+                    <div class="door__item">
+
+                        <h4 class="door__title">
+                            Кол-во
+                        </h4>
+
+                        <div class="door__info">
+                            10
+                        </div>
+
+                        <div class="door__info">
+                            5
+                        </div>
+
+                    </div>
+
+
+                    <div class="door__item">
+
+                        <h4 class="door__title">
+                            Площадь
+                        </h4>
+
+                        <div class="door__info">
+                            15 м2
+                        </div>
+
+                        <div class="door__info">
+                            10 м2
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="door-bottom">
+
+            <div class="door__total">
+                <span class="door__span">Итого:</span> Количество, 15 деталей, Площадью 25 м2, Листов 2
+            </div>
+
+            <div class="door__box">
+
+                <button type="submit" class="back">
+                    Назад
+                </button>
+
+                <button type="submit" class="download">
+                    Скачать G-код
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/vendor.min.js"></script>
+    <script>
+        $('.parameters__right-button').magnificPopup({ removalDelay: 300, mainClass: 'mfp-fade' });
+        $('.close').on('click', function () {
+            $('.parameters__right-button').magnificPopup('close');
+        });
+    </script>
 </body>
 
 </html>

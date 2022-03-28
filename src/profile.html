@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--#include virtual="/templates/_head.html" -->
+
+<body class="wrapper" style="background: #E5E5E5;">
+
+    <!--#include virtual="/templates/_header-second.html" -->
+    <main class="content">
+        <div class="container">
+            <div class="breadcrumbs">
+                <ul>
+                    <li><a href="#">Главная / </a></li>
+                    <li><span> Профиль</span></li>
+                </ul>
+            </div>
+        </div>
+        <section class="profile">
+            <div class="container profile__container">
+                <div class="profile__box">
+                    <div class="profile__box-title">Редактировать профиль</div>
+                    <div class="profile__box-item"> <span>E-mail</span> <label><input type="email"></label></div>
+                    <div class="profile__box-item"><span>Номер телефона</span> <label><input type="tel"></label></div>
+
+                    <button class="profile__button" type="button">Сохранить</button>
+                </div>
+                <div class="profile__box">
+                    <div class="profile__box-title">Сменить пароль</div>
+                    <div class="profile__box-item"> <span>Старый пароль</span> <label><input type="password"></label>
+                    </div>
+                    <div class="profile__box-item"><span>Новый пароль</span> <label><input type="password"></label>
+                    </div>
+                    <div class="profile__box-item"><span>Повторите пароль</span> <label><input type="password"></label>
+                    </div>
+                    <button class="profile__button" type="button">Сохранить</button>
+                </div>
+                <div class="profile__box big">
+                    <div class="profile__box-title">Настройки по умолчанию</div>
+                    <p class="profile__box-text">
+                        Задайте настройки которые всегда будут отображаться при создании фасада
+                    </p>
+                    <div class="profile__box-parameters">
+                        <div class="profile__box-parameters-item">
+                            <label>
+                                <span>
+                                    Ширина, мм
+                                </span>
+                                <input type="text">
+                            </label>
+                        </div>
+                        <div class="profile__box-parameters-item">
+                            <label>
+                                <span>
+                                    Высота, мм
+                                </span>
+                                <input type="text">
+                            </label>
+                        </div>
+                        <div class="profile__box-parameters-item">
+                            <label>
+                                <span>
+                                    Расстояние от края, мм
+                                </span>
+                                <input type="text">
+                            </label>
+                        </div>
+                        <button class="profile__box-parameters-delete" type="button"><img src="images/delete.svg"
+                                alt="удалить"></button>
+                    </div>
+                    <button class="profile__box-parameters-add" type="button">Добавить лист</button>
+                    <button class="profile__button" type="button">Сохранить</button>
+                </div>
+            </div>
+
+            </div>
+        </section>
+
+    </main>
+    <!--#include virtual="/templates/_footer.html" -->
+
+</body>
+
+</html>
