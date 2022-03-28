@@ -11,8 +11,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/vendor.min.css?=1648496934544">
-	<link rel="stylesheet" href="css/main.min.css?=1648496934544">
+	<link rel="stylesheet" href="css/vendor.min.css?=1648498727174">
+	<link rel="stylesheet" href="css/main.min.css?=1648498727174">
 </head>
 
 <body class="wrapper" style="background: #E5E5E5;">
@@ -43,39 +43,53 @@
 </header>
     <main class="content">
         <div class="container">
+            <div class="form__tab">
+                <button class="form__tab-button active">
+                    Войти
+                </button>
+                <button class="form__tab-button">
+                    Регистрация
+                </button>
+                <button class="form__tab-button">
+                    Восстановить пароль
+                </button>
+            </div>
             <div class="form-wrapper">
-                <form class="form">
+                <form class="form active">
                     <label>
                         <span>E-mail</span>
-                        <input type="email">
+                        <input type="email" placeholder="artem_nee@mail.ru">
                     </label>
                     <label>
-                        <span>E-mail</span>
-                        <input type="email">
+                        <span>Пароль</span>
+                        <input type="password" placeholder="******">
+                        <a href="#">Забыли пароль?</a>
                     </label>
+
                     <button class="form__button">
-                    войти
+                        войти
                     </button>
+
                 </form>
                 <form class="form">
                     <label>
-                        <span>E-mail</span>
-                        <input type="email">
+                        <span>E-mail <i>*</i></span>
+                        <input type="email" placeholder="artem_nee@mail.ru">
                     </label>
                     <label>
-                        <span>E-mail</span>
-                        <input type="email">
+                        <span>Номер телефона  <i>*</i></span>
+                        <input type="tel" placeholder="+ 7 707 928 93 00">
                     </label>
                     <label>
-                        <span>E-mail</span>
-                        <input type="email">
+                        <span>Пароль <i>*</i></span>
+                        <input type="password" placeholder="******">
                     </label>
                     <label>
-                        <span>E-mail</span>
-                        <input type="email">
+                        <span>Повторите пароль <i>*</i></span>
+                        <input type="password" placeholder="******">
                     </label>
                     <button class="form__button">
-                    Создать аккаунт
+                        Создать аккаунт
                     </button>
                 </form>
                 <form class="form">
@@ -85,7 +99,7 @@
                     </p>
                     <label>
                         <span>E-mail</span>
-                        <input type="email">
+                        <input type="email" placeholder="artem_nee@mail.ru">
                     </label>
                     <button class="form__button">
                         Отправить
@@ -108,7 +122,24 @@
 		</ul>
 	</div>
 </footer>
+    <script>
+        const formArr = document.querySelectorAll('.form'),
+            formTab = document.querySelector('.form__tab'),
+            formTabButton = document.querySelectorAll('.form__tab-button');
 
+        formTab.addEventListener('click', (e) => {
+            formTabButton.forEach((item, index) => {
+                if (e.target === item) {
+                    item.classList.add('active');
+                    formArr[index].classList.add('active');
+                }
+                else{
+                    item.classList.remove('active');
+                    formArr[index].classList.remove('active'); 
+                }
+            })
+        })
+    </script>
 </body>
 
 </html>

@@ -1,16 +1,17 @@
-.form-wrapper {
+// .form-wrapper {
+// }
+.form {
+    &.active {
+        display: flex;
+    }
     background: #fafafa;
     /* Image Card */
-
 
     padding: 38px 73px 50px 68px;
     max-width: 580px;
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.07);
-    border-radius: 10px 0px 10px 10px;
-}
-.form {
-
-    display: flex;
+    border-radius: 0 0 10px 10px;
+    display: none;
     flex-direction: column;
 
     &__text {
@@ -22,7 +23,7 @@
     &__button {
         margin-top: 40px;
         display: inline-block;
-     
+
         padding: 8px 13px;
         width: 100%;
         height: 38px;
@@ -36,11 +37,22 @@
         border-radius: 5px;
     }
     label {
+        margin-bottom: 20px;
+        a {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 14px;
+            margin-top: 13px;
+            color: rgba(63, 65, 66, 0.4);
+        }
         span {
             font-size: 14px;
             color: #1d1d1d;
             margin-bottom: 12px;
             display: inline-block;
+            i {
+                color: rgba(238, 90, 90, 1);
+            }
         }
         input {
             padding: 17px 21px 17px 15px;
@@ -50,9 +62,26 @@
             height: 38px;
             font-size: 14px;
 
-            color: #a0a0a0;
+            color: rgba(63, 65, 66, 1);
+
             border: 2px solid #e8e8e8;
             box-sizing: border-box;
         }
+    }
+}
+.form__tab {
+    display: flex;
+    max-width: 580px;
+    width: 100%;
+    height: 46px;
+}
+.form__tab-button {
+    width: 34%;
+    background: #efefef;
+    &.active {
+        background: #fafafa;
+    }
+    &:nth-child(1) {
+        border: 10px 0 0 0;
     }
 }

@@ -179,3 +179,10 @@ input {
         }
     }
 }
+input {
+    color: rgba(63, 65, 66, 1) !important;
+    &::placeholder {
+        font-size: 14px;
+        color: #a0a0a0;
+    }
+}
