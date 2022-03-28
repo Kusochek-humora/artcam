@@ -1,0 +1,98 @@
+.promo {
+    background: linear-gradient(0deg, #f2f2f2 0%, #ffffff 100%);
+    padding-top: 161px;
+    min-height: 704px;
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__image {
+        max-width: 480px;
+        height: 542px;
+        margin-right: 62px;
+        position: relative;
+        z-index: 1;
+        &::after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            top: 128px;
+            left: -146px;
+            width: 238px;
+            height: 238px;
+            background: #a6775b;
+            opacity: 0.1;
+            border-radius: 7px;
+        }
+        &-item {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__title {
+        line-height: 49px;
+        color: #3f4142;
+    }
+    &__button {
+        border-radius: 5px;
+        max-width: 283px;
+        width: 100%;
+        min-height: 40px;
+        height: auto;
+        background-color: $brown;
+        font-weight: 500;
+        font-size: 16px;
+        color: #fff;
+        margin-top: 39px;
+    }
+
+    @media screen and (max-width: 1024px) {
+        padding-top: 140px;
+        &__image {
+            max-width: 420px;
+            height: 480px;
+            margin-right: 0;
+        }
+        &__title {
+            font-size: 35px;
+            line-height: 43px;
+        }
+        &__info {
+            margin-right: 25px;
+        }
+    }
+    @media screen and (max-width: 700px) {
+        padding-top: 120px;
+        &__container {
+            flex-direction: column;
+        }
+        &__image {
+            max-width: 320px;
+            height: 360px;
+            order: 1;
+            margin-bottom: 24px;
+            &::after {
+                top: -24px;
+                left: -40px;
+            }
+        }
+        &__info {
+            order: 2;
+            margin-right: 0;
+        }
+        &__title.title.h1 {
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+            br {
+                display: none;
+            }
+        }
+        &__button {
+            margin: 28px auto 0;
+        }
+    }
+}

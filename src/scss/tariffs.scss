@@ -1,0 +1,95 @@
+.tariffs {
+    padding: 83px 0;
+    &__title {
+        margin-bottom: 83px;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &-item_after {
+            position: relative;
+            &::after {
+                content: attr(data-description);
+                position: absolute;
+                font-size: 16px;
+                top: -30px;
+                left: 0;
+                color: #3f4142 !important;
+            }
+        }
+        &-item {
+            background-color: #ffffff;
+            box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.12);
+            border-radius: 10px;
+            transition: 0.3s all;
+            color: #3f4142;
+            min-height: 286px;
+            max-width: calc(25% - 20px);
+            padding: 34px 30px 0;
+
+            &.active {
+                background-color: $brown;
+                color: #fff;
+                .tariffs__list-button {
+                    opacity: 1;
+                }
+            }
+        }
+        &-text {
+            font-size: 16px;
+            margin-bottom: 27px;
+        }
+        &-title {
+            margin-bottom: 17px;
+        }
+        &-price {
+            margin-bottom: 23px;
+        }
+        &-title,
+        &-price {
+            display: inline-block;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        &-button {
+            background: #ffffff;
+            height: 38px;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 5px;
+            opacity: 0;
+            transition: 0.5s all;
+        }
+    }
+    @media screen and (max-width: 1027px) {
+        &__list {
+            &-item {
+                max-width: calc(50% - 20px);
+                &:nth-child(-n + 2) {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 600px) {
+        padding: 43px 0;
+        &__title {
+            margin-bottom: 21px;
+            text-align: center;
+        }
+        &__list {
+            &-item {
+                max-width: calc(100%);
+                margin-bottom: 20px;
+                &:first-child {
+                    margin-bottom: 85px;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
