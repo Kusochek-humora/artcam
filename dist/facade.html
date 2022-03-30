@@ -11,8 +11,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/vendor.min.css?=1648650911059">
-	<link rel="stylesheet" href="css/main.min.css?=1648650911059">
+	<link rel="stylesheet" href="css/vendor.min.css?=1648665452215">
+	<link rel="stylesheet" href="css/main.min.css?=1648665452215">
 </head>
 
 <body class="wrapper" style="background: #E5E5E5;">
@@ -43,26 +43,33 @@
 </header>
     <main class="content">
         <div class="container">
-            <label class="select-wrapper">
+            <div class="select__box">
+                <div class="select__wrapper">
+                    <input type="hidden" id="select__input">
+                    <div class="select__header">
+                        <span class="select__header-title">Тип фасада: </span><span
+                            class="select__header-pick">Все</span>
+                    </div>
+                    <div class="select__dropdown">
+                        <div class="select__dropdown-item" data-value="Все">Все</div>
+                        <div class="select__dropdown-item" data-value="1">1</div>
+                        <div class="select__dropdown-item" data-value="2">2</div>
+                    </div>
+                </div>
+                <div class="select__wrapper">
+                    <input type="hidden" id="select__input">
+                    <div class="select__header">
+                        <span class="select__header-title">Тип фасада: </span><span
+                            class="select__header-pick">Все</span>
+                    </div>
+                    <div class="select__dropdown">
+                        <div class="select__dropdown-item" data-value="Все">Все</div>
+                        <div class="select__dropdown-item" data-value="1">1</div>
+                        <div class="select__dropdown-item" data-value="2">2</div>
+                    </div>
+                </div>
+            </div>
 
-                <span>Тип фасада:</span>
-                <select name="list1" id="list1" class="select">
-                    <option value="все">все</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                </select>
-
-            </label>
-            <label class="select-wrapper">
-
-                <span>Вид фасада:</span>
-                <select name="list2" id="list2" class="select">
-                    <option value="все">все</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                </select>
-
-            </label>
         </div>
         <div class="container">
             <div class="facade__box">
@@ -234,67 +241,8 @@
 		</ul>
 	</div>
 </footer>
+    <script src="js/facade.min.js?=1648665452215"></script>
     <script>
-        const slideWrapper = document.querySelectorAll('.facade__box-slider');
-
-        slideWrapper.forEach(item => {
-            let slides = item.querySelectorAll('.facade__box-slide');
-            let dots = item.querySelectorAll('.facade__box-dots>.dot');
-            let index = 0;
-            // код слайдера
-
-            const activeSlide = n => {
-                for (slide of slides) {
-                    slide.classList.remove('active')
-                }
-                slides[n].classList.add('active');
-            };
-            const activeDot = n => {
-                for (dot of dots) {
-                    dot.classList.remove('active')
-                }
-                dots[n].classList.add('active');
-            };
-            const movingSlides = index => {
-                activeSlide(index);
-                activeDot(index)
-            }
-
-            const nextSlide = () => {
-                if (index == slides.length - 1) {
-                    index = 0;
-                    movingSlides(index);
-                }
-                else {
-                    index++;
-                    movingSlides(index);
-                }
-            }
-            const prevSlide = () => {
-                if (index == 0) {
-                    index = slides.length - 1;
-                    activeSlide(index);
-                }
-                else {
-                    index--;
-                    activeSlide(index);
-                }
-            }
-            setInterval(nextSlide, 2500);
-
-            dots.forEach((i, indexDot) => {
-                i.addEventListener('click', () => {
-                    index = indexDot; 
-                    activeSlide(index);
-                    activeDot(index)
-                })
-            })
-
-        })
-
-
-
-
 
     </script>
 </body>

@@ -11,8 +11,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/vendor.min.css?=1648650911059">
-	<link rel="stylesheet" href="css/main.min.css?=1648650911059">
+	<link rel="stylesheet" href="css/vendor.min.css?=1648665452215">
+	<link rel="stylesheet" href="css/main.min.css?=1648665452215">
 </head>
 
 <body class="wrapper" style="background: #E5E5E5;">
@@ -107,24 +107,7 @@
 		</ul>
 	</div>
 </footer>
-    <script>
-        const formArr = document.querySelectorAll('.form'),
-            formTab = document.querySelector('.form__tab'),
-            formTabButton = document.querySelectorAll('.form__tab-button');
-
-        formTab.addEventListener('click', (e) => {
-            formTabButton.forEach((item, index) => {
-                if (e.target === item) {
-                    item.classList.add('active');
-                    formArr[index].classList.add('active');
-                }
-                else {
-                    item.classList.remove('active');
-                    formArr[index].classList.remove('active');
-                }
-            })
-        })
-    </script>
+    <script src="js/forms.min.js?=1648665452215"></script>
 </body>
 
 </html>

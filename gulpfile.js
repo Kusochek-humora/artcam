@@ -31,7 +31,6 @@ export const buildHtml = () => {
 export const buildJs = (done) => {
 	gulp.src([
 		'src/js/vendor/*.js',
-
 		'node_modules/swiper/swiper-bundle.js',
 		'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
 	])
@@ -51,6 +50,45 @@ export const buildJs = (done) => {
 		.pipe(uglify())
 		.pipe(sourcemaps.write())
 		.pipe(concat('main.min.js'))
+		.pipe(gulp.dest('dist/js'))
+		.pipe(sync.stream());
+
+	gulp.src('src/js/facade.js')
+		.pipe(plumber())
+		.pipe(rigger())
+		.pipe(babel({
+			presets: ['@babel/preset-env']
+		}))
+		.pipe(sourcemaps.init())
+		.pipe(uglify())
+		.pipe(sourcemaps.write())
+		.pipe(concat('facade.min.js'))
+		.pipe(gulp.dest('dist/js'))
+		.pipe(sync.stream());
+
+	gulp.src('src/js/forms.js')
+		.pipe(plumber())
+		.pipe(rigger())
+		.pipe(babel({
+			presets: ['@babel/preset-env']
+		}))
+		.pipe(sourcemaps.init())
+		.pipe(uglify())
+		.pipe(sourcemaps.write())
+		.pipe(concat('forms.min.js'))
+		.pipe(gulp.dest('dist/js'))
+		.pipe(sync.stream());
+
+	gulp.src('src/js/parameters.js')
+		.pipe(plumber())
+		.pipe(rigger())
+		.pipe(babel({
+			presets: ['@babel/preset-env']
+		}))
+		.pipe(sourcemaps.init())
+		.pipe(uglify())
+		.pipe(sourcemaps.write())
+		.pipe(concat('parameters.min.js'))
 		.pipe(gulp.dest('dist/js'))
 		.pipe(sync.stream());
 
