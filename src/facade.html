@@ -32,7 +32,16 @@
         <div class="container">
             <div class="facade__box">
                 <div class="facade__box-item">
-                    <div class="facade__box-images"><img src="images/facade-image.jpg" alt="Фасад"></div>
+                    <div class="facade__box-images facade__box-slider">
+                        <img class="facade__box-slide active" src="images/facade-image.jpg" alt="Фасад">
+                        <img class="facade__box-slide" src="images/facade-image.jpg" alt="Фасад">
+                        <img class="facade__box-slide" src="images/facade-image.jpg" alt="Фасад">
+                        <div class="facade__box-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
                     <div class="facade__box-info">
                         <div class="facade__box-title">
                             Квадро фасад
@@ -55,7 +64,16 @@
 
                 </div>
                 <div class="facade__box-item">
-                    <div class="facade__box-images"><img src="images/facade-image.jpg" alt="Фасад"></div>
+                    <div class="facade__box-images facade__box-slider">
+                        <img class="facade__box-slide active" src="images/facade-image.jpg" alt="Фасад">
+                        <img class="facade__box-slide" src="images/facade-image.jpg" alt="Фасад">
+                        <img class="facade__box-slide" src="images/facade-image.jpg" alt="Фасад">
+                        <div class="facade__box-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
                     <div class="facade__box-info">
                         <div class="facade__box-title">
                             Квадро фасад
@@ -78,7 +96,16 @@
 
                 </div>
                 <div class="facade__box-item">
-                    <div class="facade__box-images"><img src="images/facade-image.jpg" alt="Фасад"></div>
+                    <div class="facade__box-images facade__box-slider">
+                        <img class="facade__box-slide active" src="images/facade-image.jpg" alt="Фасад">
+                        <img class="facade__box-slide" src="images/facade-image.jpg" alt="Фасад">
+                        <img class="facade__box-slide" src="images/facade-image.jpg" alt="Фасад">
+                        <div class="facade__box-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
                     <div class="facade__box-info">
                         <div class="facade__box-title">
                             Квадро фасад
@@ -101,7 +128,16 @@
 
                 </div>
                 <div class="facade__box-item">
-                    <div class="facade__box-images"><img src="images/facade-image.jpg" alt="Фасад"></div>
+                    <div class="facade__box-images facade__box-slider">
+                        <img class="facade__box-slide active" src="images/facade-image.jpg" alt="Фасад">
+                        <img class="facade__box-slide" src="images/facade-image.jpg" alt="Фасад">
+                        <img class="facade__box-slide" src="images/facade-image.jpg" alt="Фасад">
+                        <div class="facade__box-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
                     <div class="facade__box-info">
                         <div class="facade__box-title">
                             Квадро фасад
@@ -138,7 +174,8 @@
                 </button>
                 <div class="pagination__select">
                     <div class="pagination__select-counter">1</div>
-                    <button type="button" class="pagination__select-pick"><img src="images/appereance.svg" alt=""></button>
+                    <button type="button" class="pagination__select-pick"><img src="images/appereance.svg"
+                            alt=""></button>
                 </div>
                 <button type="button" class="pagination__button">
                     <img src="images/next2.svg" alt="">
@@ -151,7 +188,69 @@
         </div>
     </main>
     <!--#include virtual="/templates/_footer.html" -->
+    <script>
+        const slideWrapper = document.querySelectorAll('.facade__box-slider');
 
+        slideWrapper.forEach(item => {
+            let slides = item.querySelectorAll('.facade__box-slide');
+            let dots = item.querySelectorAll('.facade__box-dots>.dot');
+            let index = 0;
+            // код слайдера
+
+            const activeSlide = n => {
+                for (slide of slides) {
+                    slide.classList.remove('active')
+                }
+                slides[n].classList.add('active');
+            };
+            const activeDot = n => {
+                for (dot of dots) {
+                    dot.classList.remove('active')
+                }
+                dots[n].classList.add('active');
+            };
+            const movingSlides = index => {
+                activeSlide(index);
+                activeDot(index)
+            }
+
+            const nextSlide = () => {
+                if (index == slides.length - 1) {
+                    index = 0;
+                    movingSlides(index);
+                }
+                else {
+                    index++;
+                    movingSlides(index);
+                }
+            }
+            const prevSlide = () => {
+                if (index == 0) {
+                    index = slides.length - 1;
+                    activeSlide(index);
+                }
+                else {
+                    index--;
+                    activeSlide(index);
+                }
+            }
+            setInterval(nextSlide, 2500);
+
+            dots.forEach((i, indexDot) => {
+                i.addEventListener('click', () => {
+                    index = indexDot; 
+                    activeSlide(index);
+                    activeDot(index)
+                })
+            })
+
+        })
+
+
+
+
+
+    </script>
 </body>
 
 </html>

@@ -143,7 +143,6 @@ export const server = () => {
 	sync.init({
 		ui: false,
 		notify: false,
-		tunnel: true,
 		server: {
 			baseDir: 'dist'
 		}
