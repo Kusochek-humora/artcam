@@ -35,6 +35,8 @@
     "gulp-svgmin": "^3.0.0"
   },
   "dependencies": {
+    "datatables.net": "^1.11.5",
+    "datatables.net-dt": "^1.11.5",
     "magnific-popup": "^1.1.0",
     "normalize.css": "^8.0.1",
     "swiper": "^8.0.7"

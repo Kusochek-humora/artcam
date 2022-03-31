@@ -1,0 +1,39 @@
+.dataTables_length {
+    max-width: 104px;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: "";
+        background-image: url(../images/appereance.svg);
+        width: 10px;
+        height: 5px;
+        bottom: 50%;
+        right: 21px;
+    }
+    select {
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.6);
+        padding: 0 16px;
+        background-color: transparent;
+        // padding: 16px 12px 16px 16px;
+        min-width: 104px;
+        height: 39px;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+        appearance: none;
+    }
+}
+.dataTables_filter {
+    display: none;
+}
+.dataTables_paginate,
+.paging_simple_numbers {
+    display: flex;
+    span {
+        a {
+            display: none;
+        }
+    }
+}
+.paginate_button {
+}

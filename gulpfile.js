@@ -32,6 +32,7 @@ export const buildJs = (done) => {
 	gulp.src([
 		'src/js/vendor/*.js',
 		'node_modules/swiper/swiper-bundle.js',
+		'node_modules/datatables.net/js/jquery.dataTables.js',
 		'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
 	])
 		.pipe(plumber())
