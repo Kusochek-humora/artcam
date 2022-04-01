@@ -28,7 +28,17 @@
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.07);
     border-radius: 0px 0px 10px 10px;
     padding: 15px;
+
+    // overflow: hidden;
+
+    // zoom: 2.5;
 }
+// .parameters__center-item {
+//     img {
+//         transform: scale(2);
+//     }
+// }
+
 .parameters__center-tabs {
     display: flex;
 }

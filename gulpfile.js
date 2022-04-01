@@ -32,7 +32,7 @@ export const buildJs = (done) => {
 	gulp.src([
 		'src/js/vendor/*.js',
 		'node_modules/swiper/swiper-bundle.js',
-		'node_modules/datatables.net/js/jquery.dataTables.js',
+
 		'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
 	])
 		.pipe(plumber())
@@ -111,6 +111,20 @@ export const buildCss = (done) => {
 		.pipe(sync.stream());
 
 	gulp.src('src/scss/main.scss')
+		.pipe(plumber())
+		.pipe(rename({
+			suffix: '.min'
+		}))
+		.pipe(sourcemaps.init())
+		.pipe(sass())
+		.pipe(replace('(/images/', '(../images/'))
+		.pipe(prefixer())
+		.pipe(csso())
+		.pipe(sourcemaps.write('./'))
+		.pipe(gulp.dest('dist/css'))
+		.pipe(sync.stream());
+
+		gulp.src('src/scss/main-second.scss')
 		.pipe(plumber())
 		.pipe(rename({
 			suffix: '.min'

@@ -92,32 +92,7 @@
     @include flex-center;
     margin-left: 25px;
 }
-.pagination {
-    justify-content: flex-end;
-    margin-bottom: 43px;
-    display: flex;
-    align-items: center;
-}
-.pagination__counter {
-    font-size: 16px;
-    margin-right: 35px;
-    color: rgba(0, 0, 0, 0.6);
-}
-// .pagination__button {
-// }
-.pagination__select {
-    margin: 0 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 104px;
-    width: 100%;
-    padding: 16px 12px 16px 16px;
-    display: flex;
-    height: 39px;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-}
+
 // .pagination__select-counter {
 // }
 // .pagination__select-pick {

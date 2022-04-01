@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
-<!--#include virtual="/templates/_head.html" -->
+<!--#include virtual="/templates/_head-second.html" -->
 
 <body class="wrapper" style="background: #E5E5E5;">
 
     <!--#include virtual="/templates/_header-second.html" -->
     <main class="content">
-        <div class="container">
+        <div class="container settings">
             <div class="select__box">
                 <div class="select__wrapper">
                     <input type="hidden" id="select__input">
@@ -35,7 +35,32 @@
                 </div>
             </div>
 
+            <div class="pagination">
+                <span class="dataTables_info pagination__counter" id="history-table_info" role="status"
+                    aria-live="polite">
+                    1–4 из 100
+                </span>
+                <button type="button" class="pagination__button">
+                    <img src="images/back1.svg" alt="">
+                </button>
+                <button type="button" class="pagination__button">
+                    <img src="images/back2.svg" alt="">
+                </button>
+                <div class="pagination__select">
+                    <div class="pagination__select-counter">1</div>
+                    <button type="button" class="pagination__select-pick"><img src="images/appereance.svg"
+                            alt=""></button>
+                </div>
+                <button type="button" class="pagination__button">
+                    <img src="images/next2.svg" alt="">
+                </button>
+                <button type="button" class="pagination__button">
+                    <img src="images/next1.svg" alt="">
+                </button>
+            </div>
         </div>
+
+
         <div class="container">
             <div class="facade__box">
                 <div class="facade__box-item">
